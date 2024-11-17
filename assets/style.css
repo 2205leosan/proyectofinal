@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wdth,wght@0,5..1200,87.5,700;1,5..1200,87.5,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wdth,wght@0,5..1200,87.5,700;1,5..1200,87.5,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --bs-blue: #095585;
+    --bs-green: #27a40b;
+}
+
+html {
+    font-size: 62.5%
+        /* convierte 1 rem a 10 pixeles */
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+.card-proyecto {
+    box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+}
+
+.header-img {
+    height: 5rem;
+}
+
+.acerca {
+    height: 100vh;
+    width: 100vw;
+    margin-top: 100px;
+    background-image: url('../assets/img/fondo.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: lighten;
+    overflow: hidden;
+   
+}
+
+.card-body {
+    height: 300px;
+}
+
+.foto {
+    height: 50rem;
+    width: 40rem;
+    border-radius: 50%;
+    background-image: url('../assets/img/foto.png');
+    background-size: cover;
+    background-position: center;
+    border: 2px solid black;
+    transition-property: filter, transform;
+    transition-duration: 300ms;
+    animation: flotar 3s ease-in-out infinite;
+
+    &:hover{
+        filter: drop-shadow(0 0 10px rgb(42, 44, 45));
+        transform: scale(1.2);
+        
+        
+    }
+  }
+
+  @keyframes flotar {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+
+  .tarjeta img {
+    transition-property: transform;
+    transition-duration: 300ms;
+    
+  }
+
+
+  .tarjeta img:hover{
+    transform: scale(1.2) translateX(80px)
+  }
+
+  .acerca-txt {
+        font-size: 5rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 600;
+        
+    
+  }
+
+  span {
+    color: var(--bs-green);
+  }
+  
+h1,
+h2,
+h3 {
+    font-family: "Playfair", serif;
+    ;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 4rem;
+    }
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+@media (min-width: 768px) {
+    h3 {
+        font-size: 3rem;
+    }
+}
+
+.row.single-form {
+	box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+}
+
+.left {
+	background: var(--bs-green);
+	padding: 200px 98px;
+}
+.left h2 {
+	font-family: poppins;
+	color: #ffffff;
+	font-weight: 700;
+	font-size: 48px;
+}
+.left h2 span {
+	font-weight: 100;
+}
+
+.single-form{
+    background: #fff;
+}
+.right {
+	padding: 70px 100px;
+	position: relative;
+}
+.right i {
+	position: absolute;
+	font-size: 90px;
+	left: -27px;
+	top: 40%;
+	color: #fff;
+    
+}
+
+
+.form-control {
+	border: 2px solid #000;
+}
+
+.ico img:hover {
+    transform: scale(1.2);
+}
+
+
+@media (max-width:767px){
+    .left {
+  padding: 90px 15px;
+  text-align: center;
+}
+.left h2 {
+  font-size: 25px;
+}
+.right {
+  padding: 25px;
+}
+.right i {
+  top: -52px;
+  transform: rotate(90deg);
+  left: 46%;
+}
+.right button {
+	width: 150px;
+	padding: 12px 0;
+}
+    
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .right i {
+	top: -52px;
+	transform: rotate(90deg);
+	left: 50%;
+}
+
+.text-primary,
+.nombre-sitio {
+    color: var(--bs-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-blue) !important;
+}
+
+.btn-success {
+    background-color: var(--bs-green) !important;
+}
+
+}
